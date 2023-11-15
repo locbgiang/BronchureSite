@@ -1,17 +1,27 @@
+import { Link } from "react-router-dom";
 
 function NavBar(){
     return(
         <nav className="nav">
-            <a href="/" className="Bronchure">Home</a>
+            <Link to="/" className="Bronchure">
+                Bronchure Site
+            </Link>
             <ul>
-                <li className="active">
-                    <a href="/About">About</a>    
-                </li>
-                <li>
-                    <a href="/Contact">Contact</a>    
-                </li>
+                <CustomLink to='/pricing'>Pricing</CustomLink>
+                <CustomLink to='/about'>About</CustomLink>
             </ul>
         </nav>
+    )
+}
+
+function CustomLink({to, children, ...props}) {
+    const path = window.location.pathname
+    return (
+        <li className={path === to ? "active" : ""}>
+            <Link to={to} {...props}>
+                {children}
+            </Link>
+        </li>
     )
 }
 
