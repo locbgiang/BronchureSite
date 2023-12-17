@@ -41,14 +41,17 @@ body {
     background-color: #777;
 }
 
+/*home page */
+
 .brochure-container {
     position: relative;
     text-align: center;
 }
 
 .brochure-image {
+    height: 500px;
     width: 100%;
-    height: auto;
+    object-fit: fit
 }
 
 .text-overlay {
