@@ -43,6 +43,10 @@ body {
 
 /*home page */
 
+.home {
+    height: 100%;
+}
+
 .brochure-container {
     position: relative;
     text-align: center;
